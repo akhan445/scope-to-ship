@@ -2,12 +2,13 @@
 
 Agent skills that take an idea from a rough thought to a working app, and then keep growing it round by round. They teach as you go and adapt to your level. Works in any harness that reads `SKILL.md` (Claude Code, Codex, Cursor, …).
 
-Based on [Learn AI Basics](https://github.com/challengepost/learn-ai-basics) by Devpost (MIT). See [What's different](#whats-different).
+Inspired by [Learn AI Basics](https://github.com/challengepost/learn-ai-basics) by Devpost (MIT). See [What's different](#whats-different).
 
 **Worked example:** [four-seasons-of-canada](https://github.com/akhan445/four-seasons-of-canada) was built with these skills; its `specs/` folder holds every document they produced.
 
 ## The ideas behind it
 
+The entire process revolves around miniminzing cognitive debt.
 - **Spec-driven development.** Nothing is coded until the idea, the product and the technical plan are written down and approved. Every later step builds on those documents.
 - **Flipped interaction.** The agent interviews you. You bring the ideas and make the decisions, and it asks, probes and organizes.
 - **Learning first.** You say what you want to understand or get better at, and the skills work it into the build.
@@ -39,9 +40,10 @@ Run each skill by name. A fresh conversation between skills is fine, because the
 **Prototype first, then rounds.** The first pass is a small proof of concept that proves your idea's core. After that you can keep going for as many rounds as you like. Each round is a short cycle: say what you want next, approve a few small slices, then build and verify them. Round 2 works like Round 7, until the prototype has grown into the full project.
 
 **You pick how much the AI does.**
-- **Learn, default:** the agent writes the code, explains each step and shows you where it lives.
-- **Learn, junior-dev:** you write most of the code; the agent acts as a senior mentor with hints, task cards and code review.
-- **Learn, pair:** the agent writes the boilerplate and leaves the key logic to you.
+- **Learn- Built with 3 modes:**
+    - **default:** the agent writes the code, explains each step and shows you where it lives.
+    - **junior-dev:** you write most of the code; the agent acts as a senior mentor with hints, task cards and code review.
+    - **pair:** the agent writes the boilerplate and leaves the key logic to you.
 - **Fast:** the agent builds with less explanation and pauses for your feedback at planned checkpoints.
 
 You can change the mode any time, and it's remembered when you resume.
@@ -66,7 +68,12 @@ Compared with the original Learn AI Basics skills:
 
 - **Generic, not hackathon-specific.** No required demo video, time box or Discord step. Devpost submission is one option at the end.
 - **More ways to learn.** Learn mode gains junior-dev and pair styles, where you write the code yourself.
-- **More ways to continue.** `6-ship` is a decision, not a finish line.
+- **More ways to continue.** `6-ship` is a decision, not a finish line. After verifying the build, it asks what you want to do next:
+  - **Keep building:** it jumps back into `5-build`, which works out the current round from the checklist, asks what you want to add, and plans and builds just those slices. You can repeat this for as many rounds as you like.
+  - **Publish on GitHub:** repo checks, then an optional demo.
+  - **Prepare a hackathon submission**, such as Devpost.
+  - **Something else:** for example deploying it or sharing it with a few people.
+  - **Wrap up:** stop here.
 - **Iterate to a full project.** Rounds of plan-then-build take the prototype past a first version, with the round tracked in the checklist.
 
 ## Layout
